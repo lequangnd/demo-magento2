@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="dtn_department" resource="default" engine="innodb" comment="DTN Department">
+        <!-- identity="true" giá trị của cột tự động tăng -->
+        <column xsi:type="smallint" name="department_id" unsigned="false" nullable="false" identity="true" comment="Department ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Department Name"/>
+        <!-- Khai báo khoá chính -->
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="department_id"/>
+        </constraint>
+    </table>
+</schema>
